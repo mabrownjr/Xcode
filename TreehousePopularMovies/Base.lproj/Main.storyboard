@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TreehousePopularMovies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ula-7e-qIs">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="97" id="mzr-kR-T47" customClass="PopularMovieCell" customModule="TreehousePopularMovies" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="97"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mzr-kR-T47" id="qhE-UR-l5s">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="96.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lIA-Ng-WGS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="96.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="vJd-8c-B5N"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QmG-au-bYp">
+                                                    <rect key="frame" x="65" y="8" width="310" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="PUd-ap-Psm"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMo-5E-4zj">
+                                                    <rect key="frame" x="65" y="67.5" width="310" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="sBh-Sh-D91"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="lIA-Ng-WGS" secondAttribute="bottom" id="ClN-4g-BDc"/>
+                                                <constraint firstAttribute="bottom" secondItem="fMo-5E-4zj" secondAttribute="bottom" constant="8" id="DHv-p3-KTN"/>
+                                                <constraint firstItem="QmG-au-bYp" firstAttribute="top" secondItem="qhE-UR-l5s" secondAttribute="top" constant="8" id="Dah-bq-Ncx"/>
+                                                <constraint firstItem="lIA-Ng-WGS" firstAttribute="leading" secondItem="qhE-UR-l5s" secondAttribute="leading" id="FdT-FU-0aM"/>
+                                                <constraint firstAttribute="trailing" secondItem="fMo-5E-4zj" secondAttribute="trailing" id="JrI-xa-Wi1"/>
+                                                <constraint firstItem="lIA-Ng-WGS" firstAttribute="top" secondItem="qhE-UR-l5s" secondAttribute="top" id="NYB-hi-eXa"/>
+                                                <constraint firstItem="QmG-au-bYp" firstAttribute="leading" secondItem="lIA-Ng-WGS" secondAttribute="trailing" constant="15" id="Q1M-8E-VJT"/>
+                                                <constraint firstItem="fMo-5E-4zj" firstAttribute="leading" secondItem="lIA-Ng-WGS" secondAttribute="trailing" constant="15" id="RgB-3Y-W6v"/>
+                                                <constraint firstAttribute="trailing" secondItem="QmG-au-bYp" secondAttribute="trailing" id="bF6-bX-5xS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgView" destination="lIA-Ng-WGS" id="TPY-Jk-tYL"/>
+                                            <outlet property="releaseDateLabel" destination="fMo-5E-4zj" id="dUZ-yc-Ngq"/>
+                                            <outlet property="titleLabel" destination="QmG-au-bYp" id="tKf-vN-Nr0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="zhW-i3-8Sa"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ula-7e-qIs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0hz-Aj-1Bo"/>
+                            <constraint firstItem="ula-7e-qIs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1Iv-0W-cKx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ula-7e-qIs" secondAttribute="bottom" id="KD6-7n-ye2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ula-7e-qIs" secondAttribute="trailing" id="OJy-s9-Wy3"/>
+                            <constraint firstItem="ula-7e-qIs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bVD-GW-aKB"/>
+                            <constraint firstItem="ula-7e-qIs" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fSg-k1-ULt"/>
+                            <constraint firstItem="ula-7e-qIs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oaO-Kg-zea"/>
+                            <constraint firstItem="ula-7e-qIs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pIp-K2-A5E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="ula-7e-qIs" id="SjO-16-atI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
